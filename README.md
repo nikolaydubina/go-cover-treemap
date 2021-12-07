@@ -8,19 +8,19 @@ $ go test -coverprofile cover.out ./...
 $ go-cover-heatmap -coverprofile cover.out > out.svg
 ```
 
-`github.com/gohugoio/hugo`
+_<p align="center">github.com/gohugoio/hugo</p>_
 ![example-hugo](docs/hugo.svg)
 
-`github.com/gin-gonic/gin`
+_<p align="center">github.com/gin-gonic/gin</p>_
 ![example-gin](docs/gin.svg)
 
-`github.com/go-chi/chi`
+_<p align="center">github.com/go-chi/chi</p>_
 ![example-chi](docs/chi.svg)
 
-`github.com/nikolaydubina/treemap`
+_<p align="center">github.com/nikolaydubina/treemap</p>_
 ![example-treemap](docs/go-cover-treemap.svg)
 
-`github.com/nikolaydubina/go-featureprocessing`
+_<p align="center">github.com/nikolaydubina/go-featureprocessing</p>_
 ![example-go-featureprocessing](docs/go-featureprocessing.svg)
 
 ## Disclaimer
