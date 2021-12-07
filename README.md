@@ -44,7 +44,7 @@ Welcomed! Add pretty color palettes! Add interesting examples!
 * Official Go parser of cover profile `golang.org/x/tools/cover`: https://github.com/golang/tools/tree/master/cover
 * Go SVG Treemap renderer with heatmap: github.com/nikolaydubina/treemap
 
-## Appendix A: Assigning size to one for each file
+## Appendix A: Statements vs File for Size
 
 You can see that structure and heat changes for `github.com/gohugoio/hugo`.
 Subtrees that look bad for files no longer look as bad for statements.
