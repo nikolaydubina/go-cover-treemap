@@ -5,7 +5,7 @@ _Useful when you have large project with lots of files and packages_
 ```
 $ go install github.com/nikolaydubina/go-cover-treemap@latest
 $ go test -coverprofile cover.out ./...
-$ go-cover-heatmap -coverprofile cover.out > out.svg
+$ go-cover-treemap -coverprofile cover.out > out.svg
 ```
 
 _<p align="center">github.com/gohugoio/hugo</p>_
