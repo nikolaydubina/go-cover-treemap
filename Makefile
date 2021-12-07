@@ -5,5 +5,7 @@ docs:
 	./go-cover-treemap -coverprofile testdata/gin.cover > docs/gin.svg
 	./go-cover-treemap -coverprofile testdata/chi.cover > docs/chi.svg
 	./go-cover-treemap -coverprofile testdata/hugo.cover > docs/hugo.svg
+	./go-cover-treemap -coverprofile testdata/hugo.cover -w 1080 -h 360 > docs/hugo-1080x360.svg
+	./go-cover-treemap -coverprofile testdata/hugo.cover -w 1080 -h 180 > docs/hugo-1080x180.svg
 
 .PHONY: docs
