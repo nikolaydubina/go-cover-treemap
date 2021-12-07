@@ -30,13 +30,14 @@ var grey = color.RGBA{128, 128, 128, 255}
 
 func main() {
 	var (
-		coverprofile string
-		w            float64
-		h            float64
-		marginBox    float64
-		paddingBox   float64
-		padding      float64
-		imputeHeat   bool
+		coverprofile    string
+		w               float64
+		h               float64
+		marginBox       float64
+		paddingBox      float64
+		padding         float64
+		imputeHeat      bool
+		countStatements bool
 	)
 
 	flag.Usage = func() {
@@ -50,6 +51,7 @@ func main() {
 	flag.Float64Var(&paddingBox, "padding-box", 4, "padding between box border and content")
 	flag.Float64Var(&padding, "padding", 32, "padding around root content")
 	flag.BoolVar(&imputeHeat, "impute-heat", true, "impute heat for parents(weighted sum) and leafs(0.5)")
+	flag.BoolVar(&countStatements, "statements", true, "count statemtents in files for size of files, when false then each file is size 1")
 	flag.Parse()
 
 	if coverprofile == "" {
@@ -61,7 +63,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	tree, err := coverageTreemap(profiles)
+	tree, err := coverageTreemap(profiles, countStatements)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -107,10 +109,18 @@ func percentCovered(p *cover.Profile) float64 {
 	return float64(covered) / float64(total)
 }
 
+func numStatements(p *cover.Profile) int {
+	var total int
+	for _, b := range p.Blocks {
+		total += b.NumStmt
+	}
+	return total
+}
+
 // coverageTreemap create single treemap tree where each leaf is a file
 // heat is test coverage
 // size is number of lines
-func coverageTreemap(profiles []*cover.Profile) (*treemap.Tree, error) {
+func coverageTreemap(profiles []*cover.Profile, countStatements bool) (*treemap.Tree, error) {
 	if len(profiles) == 0 {
 		return nil, errors.New("no profiles passed")
 	}
@@ -130,9 +140,19 @@ func coverageTreemap(profiles []*cover.Profile) (*treemap.Tree, error) {
 		if _, ok := tree.Nodes[profile.FileName]; ok {
 			return nil, fmt.Errorf("duplicate node(%s)", profile.FileName)
 		}
+
+		var size int = 1
+		if countStatements {
+			size = numStatements(profile)
+			if size == 0 {
+				// fallback
+				size = 1
+			}
+		}
+
 		tree.Nodes[profile.FileName] = treemap.Node{
 			Path:    profile.FileName,
-			Size:    1,
+			Size:    float64(size),
 			Heat:    percentCovered(profile),
 			HasHeat: true,
 		}

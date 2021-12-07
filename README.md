@@ -43,3 +43,18 @@ Welcomed! Add pretty color palettes! Add interesting examples!
 * Official Go tool to make HTML from cover profile: https://github.com/golang/go/blob/master/src/cmd/cover/html.go#L97
 * Official Go parser of cover profile `golang.org/x/tools/cover`: https://github.com/golang/tools/tree/master/cover
 * Go SVG Treemap renderer with heatmap: github.com/nikolaydubina/treemap
+
+## Appendix A: Assigning size to one for each file
+
+You can see that structure and heat changes for `github.com/gohugoio/hugo`.
+Subtrees that look bad for files no longer look as bad for statements.
+Lots of red boxes for files become very small and unnoticeable.
+This can be because they contain non-testable constructs like constants.
+It is more accurate to use statments, since heat is percentage of covered statements, and we compute heat by weighting sum by sizes of children.
+In short, you are more likely want to use statements for size.
+
+files
+![example-hugo-files](docs/hugo-files.svg)
+
+statements
+![example-hugo](docs/hugo.svg)
