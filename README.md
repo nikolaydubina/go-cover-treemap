@@ -70,7 +70,7 @@ We can collapse these into longer name, and use that space for visualizing highe
 This is particularly useful for narrow dimensions, which makes feasible useful narrow dimension.
 
 1080x360 with root collapsing
-![example-long-root-med-collapsed](docs/hugo-1080x360.svg))
+![example-long-root-med-collapsed](docs/hugo-1080x360.svg)
 
 1080x360 without root collapse
 ![example-long-root-med-no-collapse](docs/hugo-long-root-1080x360.svg)
