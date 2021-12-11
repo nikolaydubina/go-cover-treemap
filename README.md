@@ -5,7 +5,7 @@ _Useful when you have large project with lots of files and packages_
 ```
 $ go install github.com/nikolaydubina/go-cover-treemap@latest
 $ go test -coverprofile cover.out ./...
-$ go-cover-heatmap -coverprofile cover.out > out.svg
+$ go-cover-treemap -coverprofile cover.out > out.svg
 ```
 
 _<p align="center">github.com/gohugoio/hugo</p>_
@@ -45,9 +45,9 @@ Welcomed! Add pretty color palettes! Add interesting examples!
 
 * Official Go tool to make HTML from cover profile: https://github.com/golang/go/blob/master/src/cmd/cover/html.go#L97
 * Official Go parser of cover profile `golang.org/x/tools/cover`: https://github.com/golang/tools/tree/master/cover
-* Go SVG Treemap renderer with heatmap: github.com/nikolaydubina/treemap
+* Go SVG Treemap renderer with treemap: github.com/nikolaydubina/treemap
 
-## Appendix A: Assigning size to one for each file
+## Appendix A: Statements vs File for Size
 
 You can see that structure and heat changes for `github.com/gohugoio/hugo`.
 Subtrees that look bad for files no longer look as bad for statements.
