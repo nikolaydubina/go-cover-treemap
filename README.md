@@ -14,6 +14,9 @@ _<p align="center">github.com/gohugoio/hugo</p>_
 _<p align="center">..also available in 1080x360</p>_
 ![example-hugo-small](docs/hugo-1080x360.svg)
 
+_<p align="center">..and even 1080x180</p>_
+![example-hugo-small](docs/hugo-1080x180.svg)
+
 _<p align="center">github.com/gin-gonic/gin</p>_
 ![example-gin](docs/gin.svg)
 
