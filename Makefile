@@ -8,5 +8,8 @@ docs:
 	./go-cover-treemap -coverprofile testdata/hugo.cover -w 1080 -h 360 > docs/hugo-1080x360.svg
 	./go-cover-treemap -coverprofile testdata/hugo.cover -w 1080 -h 180 > docs/hugo-1080x180.svg
 	./go-cover-treemap -coverprofile testdata/hugo.cover -statements=false > docs/hugo-files.svg
+	./go-cover-treemap -coverprofile testdata/hugo.cover -collapse-root=false > docs/hugo-long-root.svg
+	./go-cover-treemap -coverprofile testdata/hugo.cover -collapse-root=false -w 1080 -h 360 > docs/hugo-long-root-1080x360.svg
+	./go-cover-treemap -coverprofile testdata/hugo.cover -collapse-root=false -w 1080 -h 180 > docs/hugo-long-root-1080x180.svg
 
 .PHONY: docs

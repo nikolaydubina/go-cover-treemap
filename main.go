@@ -38,6 +38,7 @@ func main() {
 		padding         float64
 		imputeHeat      bool
 		countStatements bool
+		collapseRoot    bool
 	)
 
 	flag.Usage = func() {
@@ -49,9 +50,10 @@ func main() {
 	flag.Float64Var(&h, "h", 640, "height of output")
 	flag.Float64Var(&marginBox, "margin-box", 4, "margin between boxes")
 	flag.Float64Var(&paddingBox, "padding-box", 4, "padding between box border and content")
-	flag.Float64Var(&padding, "padding", 32, "padding around root content")
+	flag.Float64Var(&padding, "padding", 16, "padding around root content")
 	flag.BoolVar(&imputeHeat, "impute-heat", true, "impute heat for parents(weighted sum) and leafs(0.5)")
 	flag.BoolVar(&countStatements, "statements", true, "count statemtents in files for size of files, when false then each file is size 1")
+	flag.BoolVar(&collapseRoot, "collapse-root", true, "if true then will collapse roots that have one child")
 	flag.Parse()
 
 	if coverprofile == "" {
@@ -70,6 +72,12 @@ func main() {
 
 	sizeImputer := treemap.SumSizeImputer{EmptyLeafSize: 1}
 	sizeImputer.ImputeSize(*tree)
+
+	// TODO: size imputer overwrites names. so setting names and collapsing after it.
+	treemap.SetNamesFromPaths(tree)
+	if collapseRoot {
+		treemap.CollapseRoot(tree)
+	}
 
 	if imputeHeat {
 		heatImputer := treemap.WeightedHeatImputer{EmptyLeafHeat: 0.5}
@@ -150,6 +158,9 @@ func coverageTreemap(profiles []*cover.Profile, countStatements bool) (*treemap.
 			}
 		}
 
+		parts := strings.Split(profile.FileName, "/")
+		hasParent[parts[0]] = false
+
 		tree.Nodes[profile.FileName] = treemap.Node{
 			Path:    profile.FileName,
 			Size:    float64(size),
@@ -157,11 +168,12 @@ func coverageTreemap(profiles []*cover.Profile, countStatements bool) (*treemap.
 			HasHeat: true,
 		}
 
-		parts := strings.Split(profile.FileName, "/")
-		hasParent[parts[0]] = false
-
 		for parent, i := parts[0], 1; i < len(parts); i++ {
 			child := parent + "/" + parts[i]
+
+			tree.Nodes[parent] = treemap.Node{
+				Path: parent,
+			}
 
 			tree.To[parent] = append(tree.To[parent], child)
 			hasParent[child] = true

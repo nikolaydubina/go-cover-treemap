@@ -58,3 +58,22 @@ files
 
 statements
 ![example-hugo](docs/hugo.svg)
+
+## Appendix B: Long Roots
+
+It is common to have root and first few children to have only one child.
+Each takes margin and wastes space.
+We can collapse these into longer name, and use that space for visualizing higher depth of boxes.
+This is particularly useful for narrow dimensions, which makes feasible useful narrow dimension.
+
+1080x360 with root collapsing
+![example-long-root-med-collapsed](docs/hugo-1080x360.svg))
+
+1080x360 without root collapse
+![example-long-root-med-no-collapse](docs/hugo-long-root-1080x360.svg)
+
+1080x180 with root collapsing
+![example-long-root-med-collapsed](docs/hugo-1080x180.svg)
+
+1080x180 without root collapse
+![example-long-root-med-no-collapse](docs/hugo-long-root-1080x180.svg)
