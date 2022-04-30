@@ -35,7 +35,7 @@ _<p align="center">github.com/nikolaydubina/go-featureprocessing</p>_
 
 In all examples above I run `go test -coverprofile <my-file> ./...`.
 I did not do any special setup.
-Some projects may reuqire additional steps to properly run tets and generate full coverprofile.
+Some projects may require additional steps to properly run tets and generate full coverprofile.
 What you see is "lower bound" of coverage for those projects.
 All profiles generated on `main` branch of each project in GitHub on 2021-12-07.
 
@@ -47,7 +47,7 @@ Welcomed! Add pretty color palettes! Add interesting examples!
 
 * Official Go tool to make HTML from cover profile: https://github.com/golang/go/blob/master/src/cmd/cover/html.go#L97
 * Official Go parser of cover profile `golang.org/x/tools/cover`: https://github.com/golang/tools/tree/master/cover
-* Go SVG Treemap renderer with treemap: github.com/nikolaydubina/treemap
+* Go SVG Treemap renderer with treemap: https://github.com/nikolaydubina/treemap
 
 ## Appendix A: Statements vs File for Size
 
