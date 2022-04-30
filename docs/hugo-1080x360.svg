@@ -38,9 +38,9 @@
 <text 
 	data-notex="1" 
 	text-anchor="start"
-	transform="translate(896.475259,221.924486) scale(0.457112)"
+	transform="translate(896.475259,221.924486) scale(0.177766)"
 	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
-	data-math="N">codegen</text>
+	data-math="N">codegen/methods.go</text>
 		
 </g>
 
@@ -96,9 +96,9 @@
 <text 
 	data-notex="1" 
 	text-anchor="start"
-	transform="translate(1030.320391,221.924486) scale(0.237493)"
+	transform="translate(1030.320391,221.924486) scale(0.083821)"
 	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
-	data-math="N">create</text>
+	data-math="N">create/content.go</text>
 		
 </g>
 
@@ -294,9 +294,9 @@
 <text 
 	data-notex="1" 
 	text-anchor="start"
-	transform="translate(951.193212,268.070822) scale(0.196636)"
+	transform="translate(951.193212,268.070822) scale(0.055058)"
 	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
-	data-math="N">related</text>
+	data-math="N">related/inverted_index.go</text>
 		
 </g>
 
@@ -372,21 +372,15 @@
 <text 
 	data-notex="1" 
 	text-anchor="start"
-	transform="translate(951.193212,313.237124) scale(0.196636)"
+	transform="translate(951.193212,313.237124) scale(0.076470)"
 	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
-	data-math="N">watcher</text>
+	data-math="N">watcher/filenotify</text>
 		
 </g>
 
 
 <g>
 	<rect x="961.962581" y="174.467797" width="31.869303" height="15.856689" style="fill: rgba(75, 174, 91, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
-	<rect x="896.475259" y="227.924486" width="30.717953" height="8.370819" style="fill: rgba(77, 175, 91, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 </g>
 
@@ -650,12 +644,6 @@
 
 
 <g>
-	<rect x="1030.320391" y="227.924486" width="13.679609" height="8.546336" style="fill: rgba(102, 189, 99, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
 	<rect x="827.345027" y="242.881720" width="37.048450" height="21.926821" style="fill: rgba(138, 205, 102, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 </g>
@@ -663,12 +651,6 @@
 
 <g>
 	<rect x="872.393477" y="242.881720" width="0.081782" height="13.613815" style="fill: rgba(72, 172, 90, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
-	<rect x="988.407166" y="297.385288" width="15.478046" height="2.243631" style="fill: rgba(170, 5, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 </g>
 
@@ -895,9 +877,9 @@
 <text 
 	data-notex="1" 
 	text-anchor="start"
-	transform="translate(353.491299,160.847706) scale(0.246636)"
+	transform="translate(353.491299,160.847706) scale(0.129190)"
 	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
-	data-math="N">filesystems</text>
+	data-math="N">filesystems/basefs.go</text>
 		
 </g>
 
@@ -1232,12 +1214,6 @@
 
 
 <g>
-	<rect x="1031.021029" y="264.470822" width="12.978971" height="4.914466" style="fill: rgba(254, 211, 125, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
 	<rect x="827.345027" y="63.200000" width="30.904856" height="49.347259" style="fill: rgba(243, 249, 172, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 <text 
@@ -1338,12 +1314,6 @@
 
 <g>
 	<rect x="926.301051" y="273.895305" width="0.892162" height="6.676042" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
-	<rect x="951.193212" y="274.070822" width="13.213954" height="7.566302" style="fill: rgba(197, 230, 125, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 </g>
 
@@ -1670,7 +1640,7 @@
 
 
 <g>
-	<rect x="951.193212" y="319.237124" width="13.213954" height="4.762876" style="fill: rgba(77, 175, 91, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	<rect x="951.193212" y="319.237124" width="11.654104" height="4.762876" style="fill: rgba(64, 168, 88, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 </g>
 
@@ -1682,19 +1652,7 @@
 
 
 <g>
-	<rect x="353.491299" y="166.847706" width="26.044759" height="19.683683" style="fill: rgba(199, 231, 126, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
 	<rect x="386.392308" y="258.037036" width="4.984222" height="2.322693" style="fill: rgba(254, 236, 156, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
-	
-</g>
-
-
-<g>
-	<rect x="748.564116" y="288.878162" width="6.727524" height="0.526087" style="fill: rgba(254, 229, 146, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
 	
 </g>
 

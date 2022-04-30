@@ -1,5 +1,6 @@
 docs: 
 	-rm docs/*.svg
+	cat testdata/treemap.cover | ./go-cover-treemap > docs/go-cover-treemap-stdin.svg
 	./go-cover-treemap -coverprofile testdata/treemap.cover > docs/go-cover-treemap.svg
 	./go-cover-treemap -coverprofile testdata/go-featureprocessing.cover > docs/go-featureprocessing.svg
 	./go-cover-treemap -coverprofile testdata/gin.cover > docs/gin.svg
