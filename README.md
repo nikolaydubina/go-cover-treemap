@@ -83,7 +83,7 @@ This is particularly useful for narrow dimensions, which makes feasible useful n
 1080x180 without root collapse
 ![example-long-root-med-no-collapse](docs/hugo-long-root-1080x180.svg)
 
-## Appendix C: web UI
+## Appendix C: Web UI
 
 Web UI is maintained in dedicated repository: https://github.com/nikolaydubina/go-cover-treemap-web
 
