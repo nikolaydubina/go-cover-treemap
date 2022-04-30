@@ -2,6 +2,8 @@
 
 _Useful when you have large project with lots of files and packages_
 
+> New! Now available at https://go-cover-treemap.io 🎉
+
 ```
 $ go install github.com/nikolaydubina/go-cover-treemap@latest
 $ go test -coverprofile cover.out ./...
