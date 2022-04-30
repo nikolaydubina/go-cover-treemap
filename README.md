@@ -82,3 +82,14 @@ This is particularly useful for narrow dimensions, which makes feasible useful n
 
 1080x180 without root collapse
 ![example-long-root-med-no-collapse](docs/hugo-long-root-1080x180.svg)
+
+## Appendix C: web UI
+
+Web UI is maintained in dedicated repository: https://github.com/nikolaydubina/go-cover-treemap-web
+
+This is to isolate web (WASM/JS/HTML) needed dependencies, like `syscall/js` from minimal CLI package.
+
+It turns out interactive UI is very helpful. Brower can be utilized as effective input source for:
+- changing dimensions of window -> changing dimensions of SVG
+- drag and drop file
+- slider to increase granularity of treemap
