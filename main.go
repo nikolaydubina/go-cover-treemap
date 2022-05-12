@@ -77,6 +77,10 @@ func main() {
 	sizeImputer := treemap.SumSizeImputer{EmptyLeafSize: 1}
 	sizeImputer.ImputeSize(*tree)
 	treemap.SetNamesFromPaths(tree)
+
+	weightImputer := treemap.WeightedHeatImputer{EmptyLeafHeat: 1}
+	weightImputer.ImputeHeat(*tree)
+
 	covertreemap.RemoveFilesTreeFilter(tree, filterOut)
 
 	if collapseRoot {

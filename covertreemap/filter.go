@@ -30,8 +30,4 @@ func RemoveFilesTreeFilter(tree *treemap.Tree, substr string) {
 
 		tree.To[parent] = childrenNew
 	}
-
-	// for k, v := range tree.Nodes {
-	// 	fmt.Println(k, v)
-	// }
 }
