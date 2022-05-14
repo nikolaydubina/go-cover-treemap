@@ -38,7 +38,7 @@ func main() {
 		imputeHeat      bool
 		countStatements bool
 		collapseRoot    bool
-		filterOut       string
+		onlyFolders     bool
 	)
 
 	flag.Usage = func() {
@@ -54,7 +54,7 @@ func main() {
 	flag.BoolVar(&imputeHeat, "impute-heat", true, "impute heat for parents(weighted sum) and leafs(0.5)")
 	flag.BoolVar(&countStatements, "statements", true, "count statemtents in files for size of files, when false then each file is size 1")
 	flag.BoolVar(&collapseRoot, "collapse-root", true, "if true then will collapse roots that have one child")
-	flag.StringVar(&filterOut, "filter-out", "", "filter out leafs that contains the given content in the path")
+	flag.BoolVar(&onlyFolders, "only-folders", false, "if true then do not display files")
 	flag.Parse()
 
 	var err error
@@ -81,8 +81,6 @@ func main() {
 	weightImputer := treemap.WeightedHeatImputer{EmptyLeafHeat: 1}
 	weightImputer.ImputeHeat(*tree)
 
-	covertreemap.RemoveFilesTreeFilter(tree, filterOut)
-
 	if collapseRoot {
 		treemap.CollapseLongPaths(tree)
 	}
@@ -90,6 +88,15 @@ func main() {
 	if imputeHeat {
 		heatImputer := treemap.WeightedHeatImputer{EmptyLeafHeat: 0.5}
 		heatImputer.ImputeHeat(*tree)
+	}
+
+	if onlyFolders {
+		if !imputeHeat {
+			log.Fatal("impute-heat has to be true")
+		}
+		covertreemap.AggregateGoFilesTreemapFilter(tree)
+		covertreemap.RemoveGoFilesTreemapFilter(tree)
+		covertreemap.CollapseRootsWithoutNameTreemapFilter(tree)
 	}
 
 	palette, ok := render.GetPalette("RdYlGn")

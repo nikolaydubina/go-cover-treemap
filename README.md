@@ -93,3 +93,22 @@ It turns out interactive UI is very helpful. Brower can be utilized as effective
 - changing dimensions of window -> changing dimensions of SVG
 - drag and drop file
 - slider to increase granularity of treemap
+
+## Appendix D: Only Folders
+
+Projects that have lots of files may benefit from not displaying files 
+but only folders.
+This is also useful when you want to see impact of immediate files in folder to overall folder heat.
+Hierarchical properties of size (sum of sizes of children) and heat (weighted heat of children) are preserved.
+Immediate children `.go` files in folder are aggregated into single child `*`.
+If there is only one `*` child, then it is skipped
+— suggested by [herlon214](https://github.com/herlon214)
+
+files
+![example-hugo](docs/hugo.svg)
+
+only folders
+![example-hugo-files](docs/hugo-only-folders.svg)
+
+only folders without aggregation (heat property not preserved)
+![example-hugo-files](docs/hugo-only-folders-no-aggregation.svg)
