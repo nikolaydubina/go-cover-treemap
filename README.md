@@ -110,5 +110,5 @@ files
 only folders
 ![example-hugo-files](docs/hugo-only-folders.svg)
 
-only folders without aggregation (heat property not preserved)
+only folders without aggregation (heat and size property not preserved)
 ![example-hugo-files](docs/hugo-only-folders-no-aggregation.svg)
