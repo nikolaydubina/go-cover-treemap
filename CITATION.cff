@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: If you reference this tool in publication, please cite it as below.
+title: Go Cover Treemap
+abstract: Visualization of Go code coverage via treemaps with heat
+authors:
+- family-names: Dubina
+  given-names: Nikolay
+version: 2.1
+date-released: 2021-12-21
+license: MIT
+repository-code: https://github.com/nikolaydubina/go-cover-treemap
+url: http://go-cover-treemap.io
