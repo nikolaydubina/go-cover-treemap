@@ -4,6 +4,8 @@ _Useful when you have large project with lots of files and packages_
 
 > New! Now available at https://go-cover-treemap.io 🎉
 
+[![go-recipes](https://raw.githubusercontent.com/nikolaydubina/go-recipes/main/badge.svg?raw=true)](https://github.com/nikolaydubina/go-recipes)
+
 ```
 $ go install github.com/nikolaydubina/go-cover-treemap@latest
 $ go test -coverprofile cover.out ./...
