@@ -37,7 +37,7 @@ _<p align="center">github.com/nikolaydubina/go-featureprocessing</p>_
 
 In all examples above I run `go test -coverprofile <my-file> ./...`.
 I did not do any special setup.
-Some projects may require additional steps to properly run tets and generate full coverprofile.
+Some projects may require additional steps to properly run test and generate full coverprofile.
 What you see is "lower bound" of coverage for those projects.
 All profiles generated on `main` branch of each project in GitHub on 2021-12-07.
 
