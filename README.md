@@ -114,3 +114,15 @@ only folders
 
 only folders without aggregation (heat and size property not preserved)
 ![example-hugo-files](docs/hugo-only-folders-no-aggregation.svg)
+
+## Appendix E: Accessibility
+
+Is is important that everyone can use this tool.
+Such we are providing color-blind option Red-Blue alternative.
+— suggested by [Br3nda](https://github.com/Br3nda)
+
+normal
+![example-hugo](docs/hugo.svg)
+
+color-blind
+![example-hugo-color-blind](docs/hugo-color-blind.svg)
