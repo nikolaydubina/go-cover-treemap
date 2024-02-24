@@ -39,6 +39,7 @@ func main() {
 		countStatements bool
 		collapseRoot    bool
 		onlyFolders     bool
+		colourBlind     bool
 	)
 
 	flag.Usage = func() {
@@ -55,6 +56,7 @@ func main() {
 	flag.BoolVar(&countStatements, "statements", true, "count statemtents in files for size of files, when false then each file is size 1")
 	flag.BoolVar(&collapseRoot, "collapse-root", true, "if true then will collapse roots that have one child")
 	flag.BoolVar(&onlyFolders, "only-folders", false, "if true then do not display files")
+	flag.BoolVar(&colourBlind, "colour-blind", false, "if true then use a colour blind friendly palette")
 	flag.Parse()
 
 	var err error
@@ -99,7 +101,12 @@ func main() {
 		covertreemap.CollapseRootsWithoutNameTreemapFilter(tree)
 	}
 
-	palette, ok := render.GetPalette("RdYlGn")
+	palette, ok := func() (render.ColorfulPalette, bool) {
+		if colourBlind {
+			return render.GetPalette("RdBu")
+		}
+		return render.GetPalette("RdYlGn")
+	}()
 	if !ok {
 		log.Fatalf("can not get palette")
 	}
