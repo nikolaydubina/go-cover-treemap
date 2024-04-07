@@ -184,9 +184,9 @@ func main() {
 	fileInput.Set("ondragleave", js.FuncOf(renderer.OnDragEnd))
 	fileInput.Set("ondrop", js.FuncOf(renderer.OnFileDrop))
 
-	document.Call("getElementById", "example-chi").Set("onclick", js.FuncOf(renderer.NewOnClickExample("/testdata/chi.cover")))
-	document.Call("getElementById", "example-gin").Set("onclick", js.FuncOf(renderer.NewOnClickExample("/testdata/gin.cover")))
-	document.Call("getElementById", "example-hugo").Set("onclick", js.FuncOf(renderer.NewOnClickExample("/testdata/hugo.cover")))
+	document.Call("getElementById", "example-chi").Set("onclick", js.FuncOf(renderer.NewOnClickExample("/go-cover-treemap/testdata/chi.cover")))
+	document.Call("getElementById", "example-gin").Set("onclick", js.FuncOf(renderer.NewOnClickExample("/go-cover-treemap/testdata/gin.cover")))
+	document.Call("getElementById", "example-hugo").Set("onclick", js.FuncOf(renderer.NewOnClickExample("/go-cover-treemap/testdata/hugo.cover")))
 
 	document.Call("getElementById", "details-slider-input").Set("oninput", js.FuncOf(renderer.OnDetailsSliderInputChange))
 
