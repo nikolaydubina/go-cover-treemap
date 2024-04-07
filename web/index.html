@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Make code coverage treemap from Go coverprofile. Built with Go and WASM.">
+    <meta name="theme-color" content="#ffffff">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-42J39159LJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-42J39159LJ');
+    </script>
+
+    <title>Go Cover Treemap</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade">
+
+    <style>
+        #banner {
+            font-family: 'Bungee Shade', serif;
+            font-size: 32px;
+        }
+
+        #file-input {
+            border: 10px dashed #cfcfcf;
+            max-width: 360px;
+            height: 256px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        #file-input.file-input-hover {
+            border: 10px dashed #69a6e7;
+        }
+
+        #file-input-description {
+            margin-top: 64px;
+            color: grey;
+            line-height: 2;
+        }
+
+        .header-container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        #header {
+            text-align: center;
+        }
+
+        #description {
+            color: grey;
+        }
+
+        .code {
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+        }
+
+        .example-file-link {
+            color: #69a6e7;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #details-slider-input-container {
+            width: 100%;
+        }
+
+        #details-slider-input {
+            max-width: 200px;
+        }
+
+        #download-button {
+            color: #69a6e7;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="wasm_exec.js"></script>
+    <script>
+        const go = new Go();
+
+        if (WebAssembly && WebAssembly.instantiateStreaming) {
+            WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+                go.run(result.instance);
+            });
+        } else {
+            // Safari doesn't have instantiateStreaming
+            fetch("main.wasm")
+                .then(response => response.arrayBuffer())
+                .then(buffer => WebAssembly.instantiate(buffer, go.importObject))
+                .then(result => go.run(result.instance));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header-container">
+        <div id="header">
+            <p id="banner">Go Cover Treemap</p>
+            <p id="description"><i>Generate treemap for Go cover profiles. Works offline. Nothing is uploaded. <a
+                        class="example-file-link"
+                        href="https://github.com/nikolaydubina/go-cover-treemap">Source</a></i></p>
+            <div id="button-row">
+                <a class="github-button" href="https://github.com/nikolaydubina/go-cover-treemap"
+                    data-icon="octicon-star" data-size="small" data-show-count="true"
+                    aria-label="Star nikolaydubina/go-cover-treemap on GitHub">Star</a>
+            </div>
+            <div id="details-slider-input-container" style="display: none;">
+                <input type="range" min="20" max="300" value="100" class="slider" id="details-slider-input">
+                <br>
+                <a id="download-button" download="" href="" role="button">
+                    <i>Download</i>
+                </a>
+            </div>
+        </div>
+        <div id="file-input">
+            <div id="file-input-description">
+                <i>Drag & Drop your coverprofile here</i>
+                <br>
+                <code class="code">go test -coverprofile cover.out ./...</code>
+                <br>
+                <i>or</i>
+                <br>
+                <i>load example</i>
+                <a id="example-hugo" class="example-file-link">hugo</a>
+                <a id="example-chi" class="example-file-link">chi</a>
+                <a id="example-gin" class="example-file-link">gin</a>
+            </div>
+        </div>
+    </div>
+    <div id="output-container" style="width: 100%;"></div>
+</body>
+
+</html>
