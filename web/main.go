@@ -168,7 +168,6 @@ func (r *Renderer) Render() {
 }
 
 func main() {
-	// oh, hey hi!!! 👋🏻
 	c := make(chan bool)
 	renderer := Renderer{
 		marginBox:  4,
