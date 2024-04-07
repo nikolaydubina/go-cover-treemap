@@ -39,7 +39,7 @@ jobs:
       - name: Build
         run: |
           cd web
-          cp "$$(go env GOROOT)/misc/wasm/wasm_exec.js" .
+          cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" .
           cp -r ../testdata .
           GOARCH=wasm GOOS=js go build -ldflags="-s -w" -o main.wasm main.go
 
