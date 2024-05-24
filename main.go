@@ -20,7 +20,7 @@ Generate heat treemaps for cover Go cover profile.
 Example:
 
 $ go test -coverprofile cover.out ./...
-$ go-cover-heatmap -coverprofile cover.out > out.svg
+$ go-cover-treemap -coverprofile cover.out > out.svg
 
 Command options:
 `
