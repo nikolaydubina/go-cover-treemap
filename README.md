@@ -1,4 +1,4 @@
-# 🎄 Go cover to Treemap
+# 🎄 [Go cover to Treemap](https://nikolaydubina.github.io/go-cover-treemap/)
 
 [![go-recipes](https://raw.githubusercontent.com/nikolaydubina/go-recipes/main/badge.svg?raw=true)](https://github.com/nikolaydubina/go-recipes)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/nikolaydubina/go-cover-treemap/badge)](https://securityscorecards.dev/viewer/?uri=github.com/nikolaydubina/go-cover-treemap)
