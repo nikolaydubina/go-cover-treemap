@@ -2,6 +2,7 @@
 
 [![go-recipes](https://raw.githubusercontent.com/nikolaydubina/go-recipes/main/badge.svg?raw=true)](https://github.com/nikolaydubina/go-recipes)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/nikolaydubina/go-cover-treemap/badge)](https://securityscorecards.dev/viewer/?uri=github.com/nikolaydubina/go-cover-treemap)
+[![Hits](https://hits.sh/github.com/nikolaydubina/go-cover-treemap.svg?view=today-total)](https://hits.sh/github.com/nikolaydubina/go-cover-treemap/)
 
 _Useful when you have large project with lots of files and packages_
 
