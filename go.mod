@@ -1,7 +1,6 @@
 module github.com/nikolaydubina/go-cover-treemap
 
-go 1.22
-toolchain go1.22.5
+go 1.23.0
 
 require (
 	github.com/nikolaydubina/treemap v1.2.5
