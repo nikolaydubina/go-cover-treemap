@@ -40,6 +40,7 @@ func main() {
 		collapseRoot    bool
 		onlyFolders     bool
 		colorBlind      bool
+		percent         bool
 	)
 
 	flag.Usage = func() {
@@ -57,6 +58,7 @@ func main() {
 	flag.BoolVar(&collapseRoot, "collapse-root", true, "if true then will collapse roots that have one child")
 	flag.BoolVar(&onlyFolders, "only-folders", false, "if true then do not display files")
 	flag.BoolVar(&colorBlind, "color-blind", false, "if true then use a color blind friendly palette")
+	flag.BoolVar(&percent, "percent", false, "if true then percent coverage is used")
 	flag.Parse()
 
 	var err error
@@ -90,6 +92,10 @@ func main() {
 	if imputeHeat {
 		heatImputer := treemap.WeightedHeatImputer{EmptyLeafHeat: 0.5}
 		heatImputer.ImputeHeat(*tree)
+	}
+
+	if percent {
+		covertreemap.AddCoveragePercentageToName(tree)
 	}
 
 	if onlyFolders {
