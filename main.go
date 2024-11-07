@@ -58,7 +58,7 @@ func main() {
 	flag.BoolVar(&collapseRoot, "collapse-root", true, "if true then will collapse roots that have one child")
 	flag.BoolVar(&onlyFolders, "only-folders", false, "if true then do not display files")
 	flag.BoolVar(&colorBlind, "color-blind", false, "if true then use a color blind friendly palette")
-	flag.BoolVar(&percentCoverage, "percent-coverage", false, "if true then percent coverage is used")
+	flag.BoolVar(&percentCoverage, "percent", false, "if true then percent coverage is used")
 	flag.Parse()
 
 	var err error
