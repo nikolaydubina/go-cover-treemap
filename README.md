@@ -127,6 +127,13 @@ normal
 color-blind
 ![example-hugo-color-blind](docs/hugo-color-blind.svg)
 
+## Appendix F: Percentage
+
+It is helpful to see percentage.
+— by [artemovechkin](https://github.com/artemovechkin)
+
+![](docs/hugo-percent.svg)
+
 ### Docs
 
 ```bash
