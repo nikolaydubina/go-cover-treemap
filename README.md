@@ -1,5 +1,9 @@
 # 🎄 [Go cover to Treemap](https://nikolaydubina.github.io/go-cover-treemap/)
 
+<p align="center">
+  ✨ Sponsored by <a href="https://apps.apple.com/app/id6738306589">NDX AI Shopping Assistant</a>
+</p>
+
 [![go-recipes](https://raw.githubusercontent.com/nikolaydubina/go-recipes/main/badge.svg?raw=true)](https://github.com/nikolaydubina/go-recipes)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/nikolaydubina/go-cover-treemap/badge)](https://securityscorecards.dev/viewer/?uri=github.com/nikolaydubina/go-cover-treemap)
 [![Hits](https://hits.sh/github.com/nikolaydubina/go-cover-treemap.svg?view=today-total)](https://hits.sh/github.com/nikolaydubina/go-cover-treemap/)
