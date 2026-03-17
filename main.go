@@ -54,7 +54,7 @@ func main() {
 	flag.Float64Var(&paddingBox, "padding-box", 4, "padding between box border and content")
 	flag.Float64Var(&padding, "padding", 16, "padding around root content")
 	flag.BoolVar(&imputeHeat, "impute-heat", true, "impute heat for parents(weighted sum) and leafs(0.5)")
-	flag.BoolVar(&countStatements, "statements", true, "count statemtents in files for size of files, when false then each file is size 1")
+	flag.BoolVar(&countStatements, "statements", true, "count statements in files for size of files, when false then each file is size 1")
 	flag.BoolVar(&collapseRoot, "collapse-root", true, "if true then will collapse roots that have one child")
 	flag.BoolVar(&onlyFolders, "only-folders", false, "if true then do not display files")
 	flag.BoolVar(&colorBlind, "color-blind", false, "if true then use a color blind friendly palette")
