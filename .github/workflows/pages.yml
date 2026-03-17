@@ -38,7 +38,7 @@ jobs:
         run: |
           envsubst < web/index.html > out && mv out web/index.html
           cd web
-          cp "$(go env GOROOT)/misc/wasm/wasm_exec.js" .
+          cp "$(go env GOROOT)/lib/wasm/wasm_exec.js" .
           cp -r ../testdata .
           GOARCH=wasm GOOS=js go build -ldflags="-s -w" -o main.wasm main.go
 
