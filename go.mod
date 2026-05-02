@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/nikolaydubina/treemap v1.2.5
-	golang.org/x/tools v0.43.0
+	golang.org/x/tools v0.44.0
 )
 
 require github.com/lucasb-eyer/go-colorful v1.3.0 // indirect
